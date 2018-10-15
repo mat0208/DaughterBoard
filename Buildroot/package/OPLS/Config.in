@@ -1,0 +1,4 @@
+config BR2_PACKAGE_OPLS
+    bool "opls"
+    help
+      opls package

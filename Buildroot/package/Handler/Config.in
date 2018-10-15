@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HANDLER
+    bool "handler"
+    help
+      handler package

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PYRANOMETER
+    bool "pyranometer"
+    help
+      pyranometer package

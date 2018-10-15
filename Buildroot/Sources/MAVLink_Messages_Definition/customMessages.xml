@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<mavlink>
+    <enums>
+    </enums>
+    <messages>
+        <message id="0" name="HEARTBEAT">
+            <description>Daughterboard's heartbeat: sent every seconds to the payload GCS.</description>
+            <field type="uint8_t" name="status">The Daughterboard status.</field>
+        </message>
+        <message id="150" name="CONFIG">
+            <description>This message contains all the configuration parameters for the daughterboard's sensors.</description>
+            <field type="uint8_t" name="windSensorStatus">Tells whether the Wind Sensor is (1) or is not (0) used in the current configuration.</field>
+            <field type="uint8_t" name="windSensorType">The type of wind sensor used: 0 (FT205), 1 (FT742) or 2 (Trisonica).</field>
+      <field type="uint8_t" name="windSensorComPortNum">The serial port number for the wind sensor.</field>
+      <field type="uint8_t" name="lidarStatus">Tells whether the Lidar is (1) or is not (0) used in the current configuration.</field>                  <field type="uint8_t" name="pyranometerStatus">Tells whether the Pyranometer is (1) or is not (0) used in the current configuration.</field>
+      <field type="uint8_t" name="pyranometerComPortNum">The serial port number for the Pyranometer.</field>
+      <field type="uint8_t" name="oplsStatus">Tells whether the OPLS is (1) or is not (0) used in the current configuration.</field>
+      <field type="uint8_t" name="oplsComPortNum">The serial port number for the OPLS.</field>
+            <!-- HERE -->
+            <!-- ----------------------------------------------------------------------------- --> 
+          <!-- <field type="uint8_t" name="yOUR_SENSORStatus">Tells whether YOUR_SENSOR is (1) or is not (0) used in the current configuration.</field>    
+            <!-- ----------------------------------------------------------------------------- --> 
+            <!-- IF SERIAL SENSOR -->
+            <!-- ----------------------------------------------------------------------------- --> 
+      		<!-- <field type="uint8_t" name="yOUR_SENSORComPortNum">The serial port number for YOUR_SENSOR.</field>
+            <!-- ----------------------------------------------------------------------------- --> 
+        </message>
+        <message id="151" name="WIND_SENSOR">
+            <description>This message encodes all of the wind sensor data from the daughter board.</description>
+            <field type="uint32_t" name="sec">Epoch number of seconds.</field>
+            <field type="uint32_t" name="usec">Number of microseconds. usec divided by 1e6 plus sec field provides current time with microseconds precision</field>
+            <field type="uint16_t" name="angle">The angle from the wind (in degrees).</field>
+            <field type="float" name="wind_speed">The speed of the wind for the specified angle (in m/s).</field>
+            <field type="float" name="temperature">The temperature measured by the Trisonica sensor (in degree Celsius).</field>
+        </message>
+        <message id="152" name="LIDAR">
+            <description>This message encodes all of the lidar data from the daughter board.</description>
+            <field type="uint32_t" name="sec">Epoch number of seconds.</field>
+            <field type="uint32_t" name="usec">Number of microseconds. usec divided by 1e6 plus sec field provides current time with microseconds precision</field>
+            <field type="uint16_t" name="distance">The distance measured by the Lidar (in cm).</field>
+        </message>
+        <message id="153" name="PYRANOMETER">
+            <description>This message encodes all of the pyranometer data from the daughter board.</description>
+            <field type="uint32_t" name="sec">Epoch number of seconds.</field>
+            <field type="uint32_t" name="usec">Number of microseconds. usec divided by 1e6 plus sec field provides current time with microseconds precision</field>
+            <field type="float" name="solarIrradiance">The solar iradiance measured by the Pyranometer (in W.m-2).</field>
+        </message>
+        <message id="154" name="OPLS">
+            <description>This message encodes all of the OPLS data from the daughter board.</description>
+            <field type="uint32_t" name="sec">Epoch number of seconds.</field>
+            <field type="uint32_t" name="usec">Number of microseconds. usec divided by 1e6 plus sec field provides current time with microseconds precision</field>
+            <field type="double" name="time">Time.</field>
+            <field type="double" name="ch4">CH4.</field>
+            <field type="double" name="et">Et.</field>
+            <field type="double" name="h2o">H20.</field>
+            <field type="double" name="p">Pressure.</field>
+            <field type="double" name="t">Temperature.</field>
+            <field type="double" name="rf">Range finder.</field>
+            <field type="double" name="lon">Longitude.</field>
+            <field type="double" name="lat">Latitude.</field>
+            <field type="double" name="lsr">Laser power.</field>
+        </message>
+        <!-- HERE -->
+        <!-- ----------------------------------------------------------------------------- --> 
+       <!-- <message id="155" name="YOUR_SENSOR">
+            <description>This message encodes all of the YOUR_SENSOR data from the daughter board.</description>
+            <field type="uint32_t" name="sec">Epoch number of seconds.</field>
+            <field type="uint32_t" name="usec">Number of microseconds. usec divided by 1e6 plus sec field provides current time with microseconds precision</field>
+            <field type="Type" name="YOUR_DATA">YOUR_DATA measured by YOUR_SENSOR (in YOUR_UNIT).</field>
+        </message>
+        <!-- ----------------------------------------------------------------------------- --> 
+    </messages>
+</mavlink>

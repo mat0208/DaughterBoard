@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIDAR
+    bool "lidar"
+    help
+      lidar package

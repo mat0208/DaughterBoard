@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOUR_SENSOR
+    bool "your_sensor"
+    help
+      your_sensor package

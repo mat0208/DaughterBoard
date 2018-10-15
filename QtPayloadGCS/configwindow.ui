@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>configWindow</class>
+ <widget class="QDialog" name="configWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>599</width>
+    <height>404</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configuration</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPlainTextEdit" name="infoText">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>521</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>Select a sensor, add it and plug it in the DaughterBoard before adding another one. When you added all the sensors press the &quot;Send&quot; button to begin data logging session.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendConfigButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>360</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Send Configuration</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="waitText">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>330</y>
+     <width>211</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Waiting for Daughter Board ...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadDefaultButton">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>360</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load default</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="sensorsComboBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>130</y>
+     <width>241</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Wind Sensor</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Lidar Garmin Lite v3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pyranometer Apogee Instruments SP-212</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>OPLS</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="addSensorButton">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>170</y>
+     <width>121</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add sensor &gt;&gt;</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="addedSensorsList">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>130</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
