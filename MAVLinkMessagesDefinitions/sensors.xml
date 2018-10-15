@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <mavlink>
-	<enums>
-	</enums>
 	<messages>
 		<message id="0" name="HEARTBEAT">
 			<description>Daughterboard's heartbeat: sent every seconds to the payload GCS.</description>
